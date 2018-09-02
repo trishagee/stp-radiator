@@ -1,0 +1,5 @@
+
+<div *ngIf="messageObservable | async as message; else loading">
+  {{message.projectName}}
+</div>
+<ng-template #loading>No projects</ng-template>

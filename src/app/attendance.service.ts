@@ -1,7 +1,7 @@
 import {Injectable, NgZone} from '@angular/core';
 import {Observable, Observer} from 'rxjs';
 
-class Attendee {
+export class Attendee {
   constructor(user: string) {
   }
 }
