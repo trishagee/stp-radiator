@@ -2,7 +2,9 @@ import {Injectable, NgZone} from '@angular/core';
 import {Observable, Observer} from 'rxjs';
 
 export class Attendee {
+  private user: string;
   constructor(user: string) {
+    this.user = user;
   }
 }
 
@@ -10,7 +12,7 @@ export class Attendee {
   providedIn: 'root'
 })
 export class AttendanceService {
-  private url: string;
+  private url = 'https://sleepy-refuge-77810.herokuapp.com/events';
 
   private static getUserFromEvent(event) {
     return JSON.parse(event.data).user;

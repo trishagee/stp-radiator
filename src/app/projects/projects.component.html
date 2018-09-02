@@ -1,5 +1,5 @@
 
-<div *ngIf="messageObservable | async as message; else loading">
-  {{message.projectName}}
+<div *ngIf="messageObservable | async as attendee; else loading">
+  {{attendee.user}}
 </div>
-<ng-template #loading>No projects</ng-template>
+<ng-template #loading>Nothing</ng-template>
